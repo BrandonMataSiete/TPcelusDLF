@@ -1,6 +1,6 @@
 /* src/styles.css */
 :root {
-  --primary: #0a84ff;
+  --primary: #6fdb0ad5;
   --dark: #121212;
   --light: #f8f9fa;
   --accent: #ff375f;
@@ -143,7 +143,7 @@ button {
 }
 
 button:hover {
-  background-color: #006edc;
+  background-color: #4a8115;
 }
 
 .grid {
