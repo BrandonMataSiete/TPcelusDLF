@@ -1,23 +1,29 @@
-import { NavLink } from "react-router-dom";
-import { marcas } from "../data/data";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { marcas } from '../data/data';
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/quienes-somos">Quienes Somos</NavLink>
-      <div className="dropdown">
-        <span>Productos</span>
-        <div className="dropdown-content">
-          <NavLink to="/productos">Ver todos</NavLink>
-          {marcas.map((marca) => (
-            <NavLink key={marca.id} to={`/productos/marca/${marca.id}`}>
-              {marca.nombre}
-            </NavLink>
-          ))}
-        </div>
+    <nav className="navbar">
+      <div className="logo">
+        <NavLink to="/">📱 Celulares</NavLink>
       </div>
-      <NavLink to="/contacto">Contacto</NavLink>
+      <ul className="menu">
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/quienes-somos">Quiénes Somos</NavLink></li>
+        <li className="dropdown">
+          <span>Productos ▾</span>
+          <ul className="dropdown-menu">
+            <li><NavLink to="/productos">Ver Todos</NavLink></li>
+            {marcas.map(marca => (
+              <li key={marca.id}>
+                <NavLink to={`/productos/${marca.id}`}>{marca.nombre}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li><NavLink to="/contacto">Contacto</NavLink></li>
+      </ul>
     </nav>
   );
 };

@@ -1,24 +1,35 @@
-import { useParams } from "react-router-dom";
-import { celulares } from "../data/data";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { celulares } from '../data/data';
+import './ProductoDetalle.css';
 
 const ProductoDetalle = () => {
   const { idCelular } = useParams();
-  const producto = celulares.find(c => c.id === Number(idCelular));
+  const celular = celulares.find(c => c.id === parseInt(idCelular));
 
-  if (!producto) return <p>Producto no encontrado</p>;
+  if (!celular) {
+    return <h2 className="no-encontrado">Producto no encontrado</h2>;
+  }
 
   return (
-    <section>
-      <h2>{producto.nombre}</h2>
-      <p>{producto.descripcion}</p>
-      <p><strong>${producto.precio}</strong></p>
-      <div className="galeria">
-        {producto.fotos.map((src, i) => (
-          <img key={i} src={src} alt={`Foto ${i + 1}`} />
+    <div className="detalle-container">
+      <h1>{celular.nombre}</h1>
+      <p className="descripcion">{celular.descripcion}</p>
+      <h3 className="precio">Precio: ${celular.precio}</h3>
+
+      <div className="galeria-principal">
+        {celular.fotos.map((foto, i) => (
+          <div className="imagen-box" key={i}>
+            <img src={foto} alt={celular.nombre} />
+          </div>
         ))}
       </div>
-    </section>
+
+      <div className="botones">
+        <button className="btn-comprar">Comprar producto</button>
+        <button className="btn-carrito">Agregar al carrito</button>
+      </div>
+    </div>
   );
 };
-
 export default ProductoDetalle;

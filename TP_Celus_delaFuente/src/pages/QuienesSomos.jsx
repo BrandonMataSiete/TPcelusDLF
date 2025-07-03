@@ -1,9 +1,15 @@
-const QuienesSomos = () => (
-    <section>
-      <h2>¿Quiénes Somos?</h2>
-      <p>La mejor tienda de celulares del pais.</p>
-    </section>
+import React from 'react';
+import './QuienesSomos.css';
+
+const QuienesSomos = () => {
+  return (
+    <div className="quienes-container">
+      <h1>Quiénes Somos</h1>
+      <p>
+        En <strong>MiCelu</strong>, podras encontrar los mejores y más destacados celulares del momento.
+      </p>
+      
+    </div>
   );
-  
-  export default QuienesSomos;
-  
+};
+export default QuienesSomos;
