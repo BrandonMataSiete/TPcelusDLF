@@ -65,7 +65,7 @@
 .btn-carrito {
   padding: 14px 30px;
   font-size: 1.1rem;
-  background-color: #007bff;
+  background-color: #09860f;
   color: white;
   border: none;
   border-radius: 6px;
@@ -75,5 +75,5 @@
 
 .btn-comprar:hover,
 .btn-carrito:hover {
-  background-color: #0056b3;
+  background-color: #09860f;
 }

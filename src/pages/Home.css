@@ -5,7 +5,7 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, #6a00ff, #8c00ff);
+  background: linear-gradient(135deg, #09860f, #07923d);
   color: white;
   padding: 80px 20px;
   border-radius: 12px;
@@ -24,7 +24,7 @@
 
 .btn-primary {
   padding: 14px 30px;
-  background-color: #ff7f00;
+  background-color: #09860f;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -33,7 +33,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #ff5700;
+  background-color: #09860f;
 }
 
 .destacados {
@@ -103,7 +103,7 @@
 
 .beneficio i {
   font-size: 2rem;
-  color: #007bff;
+  color: #09860f;
 }
 
 .testimonios {
